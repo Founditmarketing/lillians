@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lillian's Interiors | Premier Wallpaper Installation Since 1982 | Nashville, TN</title>
+    <meta name="description" content="Lillian's Interiors provides world-class wallpaper installation for luxury residential, commercial, and unique spaces. Based in Nashville, installing coast to coast since 1982.">
+    <meta name="keywords" content="wallpaper installation, Nashville wallpaper, luxury wallcovering, custom murals, professional wallpaper, interior design">
+    <meta property="og:title" content="Lillian's Interiors | The Paper Experts">
+    <meta property="og:description" content="Delivering superior wall covering installations since 1982. Luxury residential, commercial & unique spaces.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.lilliansinteriors.com">
+    <meta property="og:image" content="https://www.lilliansinteriors.com/images/hero.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lillian's Interiors | The Paper Experts">
+    <meta name="twitter:description" content="Delivering superior wall covering installations since 1982. Luxury residential, commercial & unique spaces.">
+    <meta name="twitter:image" content="https://www.lilliansinteriors.com/images/hero.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.lilliansinteriors.com">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Lillian's Interiors",
+        "description": "Premier wallpaper and wallcovering installation services. Delivering superior wall covering installations since 1982.",
+        "url": "https://www.lilliansinteriors.com",
+        "telephone": "+1-615-354-3000",
+        "email": "Lillian@LilliansInteriors.com",
+        "image": "https://www.lilliansinteriors.com/images/hero.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Nashville",
+            "addressRegion": "TN",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 36.1627,
+            "longitude": -86.7816
+        },
+        "foundingDate": "1982",
+        "founder": {
+            "@type": "Person",
+            "name": "Lillian Weist"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+        },
+        "serviceType": ["Wallpaper Installation", "Custom Mural Installation", "Wallpaper Removal", "Wall Preparation", "Design Consultation", "Mentoring"],
+        "priceRange": "$$$$",
+        "sameAs": [
+            "https://facebook.com",
+            "https://instagram.com",
+            "https://pinterest.com"
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- No-JS Fallback: ensure content visible without JavaScript -->
+    <noscript>
+        <style>
+            .preloader { display: none !important; }
+            .reveal-up { opacity: 1 !important; transform: none !important; }
+            .mobile-menu-link { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-line"></div>
+            <span class="preloader-text">Lillian's Interiors</span>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navigation -->
+    <header id="mainNav" class="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo" id="navLogo">
+                <span class="nav-logo-text">Lillian's</span>
+                <span class="nav-logo-sub">Interiors</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link" data-text="About">About</a>
+                <a href="#services" class="nav-link" data-text="Services">Services</a>
+                <a href="#portfolio" class="nav-link" data-text="Portfolio">Portfolio</a>
+                <a href="#process" class="nav-link" data-text="Process">Process</a>
+                <a href="#testimonials" class="nav-link" data-text="Praise">Praise</a>
+                <a href="#contact" class="nav-link nav-link-cta" data-text="Get in Touch">Get in Touch</a>
+            </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-bg"></div>
+        <nav class="mobile-menu-nav">
+            <a href="#about" class="mobile-menu-link">About</a>
+            <a href="#services" class="mobile-menu-link">Services</a>
+            <a href="#portfolio" class="mobile-menu-link">Portfolio</a>
+            <a href="#process" class="mobile-menu-link">Process</a>
+            <a href="#testimonials" class="mobile-menu-link">Praise</a>
+            <a href="#contact" class="mobile-menu-link mobile-menu-cta">Get in Touch</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="tel:6153543000">615.354.3000</a>
+            <a href="mailto:Lillian@LilliansInteriors.com">Lillian@LilliansInteriors.com</a>
+        </div>
+    </div>
+
+    <!-- ==================== HERO ==================== -->
+    <main id="mainContent">
+    <section id="hero" class="hero">
+        <div class="hero-bg">
+            <img src="images/hero.png" alt="Luxury wallpapered interior room with floral patterns, crystal chandelier, and elegant furniture by Lillian's Interiors" class="hero-bg-img" id="heroBgImg" width="1024" height="1024" fetchpriority="high">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-badge reveal-up">
+                <span class="hero-badge-line"></span>
+                <span>Nashville, Tennessee • Est. 1982</span>
+                <span class="hero-badge-line"></span>
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-title-line reveal-chars" data-delay="0.3">Walls That</span>
+                <span class="hero-title-line hero-title-italic reveal-chars" data-delay="0.6">Tell Stories</span>
+            </h1>
+            <p class="hero-subtitle reveal-up" data-delay="1.0">
+                Premier wallcovering installations crafted with four decades of artistry
+            </p>
+            <div class="hero-ctas reveal-up" data-delay="1.3">
+                <a href="#portfolio" class="btn btn-primary magnetic" id="heroCtaPrimary">
+                    <span>View Our Work</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline magnetic" id="heroCtaSecondary">
+                    <span>Request Estimate</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll-indicator" id="scrollIndicator">
+            <span>Scroll to Explore</span>
+            <div class="hero-scroll-line">
+                <div class="hero-scroll-dot"></div>
+            </div>
+        </div>
+
+        <div class="hero-decoration hero-decoration-1"></div>
+        <div class="hero-decoration hero-decoration-2"></div>
+    </section>
+
+    <!-- ==================== MARQUEE ==================== -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Residential</span><span class="marquee-dot">✦</span>
+                <span>Commercial</span><span class="marquee-dot">✦</span>
+                <span>Custom Murals</span><span class="marquee-dot">✦</span>
+                <span>Unique Spaces</span><span class="marquee-dot">✦</span>
+                <span>Wall Prep</span><span class="marquee-dot">✦</span>
+                <span>Consultations</span><span class="marquee-dot">✦</span>
+                <span>Coast to Coast</span><span class="marquee-dot">✦</span>
+                <span>Since 1982</span><span class="marquee-dot">✦</span>
+                <span>Residential</span><span class="marquee-dot">✦</span>
+                <span>Commercial</span><span class="marquee-dot">✦</span>
+                <span>Custom Murals</span><span class="marquee-dot">✦</span>
+                <span>Unique Spaces</span><span class="marquee-dot">✦</span>
+                <span>Wall Prep</span><span class="marquee-dot">✦</span>
+                <span>Consultations</span><span class="marquee-dot">✦</span>
+                <span>Coast to Coast</span><span class="marquee-dot">✦</span>
+                <span>Since 1982</span><span class="marquee-dot">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="section-label reveal-up">
+                        <span class="section-label-line"></span>
+                        <span>Our Story</span>
+                    </div>
+                    <h2 class="about-title reveal-up">
+                        The Art of <br><em>Paper & Place</em>
+                    </h2>
+                    <div class="about-text reveal-up">
+                        <p>The wall coverings surrounding you should inspire you every day. Since 1982, Lillian's Interiors has been translating aspirations into breathtaking, immersive spaces — one wall at a time.</p>
+                        <p>We listen closely to each client's vision, combining decades of craftsmanship with a designer's eye to manage transformations of any complexity and scale. Our network of talented partners and craftspeople share our dedication to exceptional, highly finished work.</p>
+                    </div>
+                    <div class="about-stats reveal-up">
+                        <div class="about-stat">
+                            <span class="about-stat-number counter" data-target="45">0</span>
+                            <span class="about-stat-suffix">+</span>
+                            <span class="about-stat-label">Years of Expertise</span>
+                        </div>
+                        <div class="about-stat-divider"></div>
+                        <div class="about-stat">
+                            <span class="about-stat-number counter" data-target="10000">0</span>
+                            <span class="about-stat-suffix">+</span>
+                            <span class="about-stat-label">Installations</span>
+                        </div>
+                        <div class="about-stat-divider"></div>
+                        <div class="about-stat">
+                            <span class="about-stat-number">50</span>
+                            <span class="about-stat-suffix"> States</span>
+                            <span class="about-stat-label">Coast to Coast</span>
+                        </div>
+                    </div>
+                    <div class="about-badge reveal-up">
+                        <div class="about-badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg>
+                        </div>
+                        <div>
+                            <strong>National Guild of Professional Paperhangers</strong>
+                            <span>Member & Former Board of Directors</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-wrap reveal-up">
+                    <div class="about-image-frame">
+                        <img src="images/about-portrait.png" alt="Lillian Weist, founder of Lillian's Interiors" class="about-image" loading="lazy">
+                        <div class="about-image-accent"></div>
+                    </div>
+                    <div class="about-image-tag">
+                        <span>Lillian Weist</span>
+                        <span>Founder & Master Craftsman</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="services section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal-up">
+                    <span class="section-label-line"></span>
+                    <span>What We Do</span>
+                </div>
+                <h2 class="section-title reveal-up">Our <em>Craft</em></h2>
+                <p class="section-subtitle reveal-up">We're the paper experts — not design or paint people. Every service we offer is laser-focused on one thing: making your walls extraordinary.</p>
+            </div>
+        </div>
+
+        <div class="services-carousel" id="servicesCarousel">
+            <div class="services-track">
+                <!-- Service 1 -->
+                <div class="service-card reveal-up" data-delay="0.1">
+                    <div class="service-card-number">01</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="8" y="4" width="48" height="56" rx="3"/>
+                            <path d="M8 20h48M20 4v16M44 4v16"/>
+                            <path d="M16 28c8 4 12 12 16 8s8-8 16 0" stroke-width="1.5"/>
+                            <path d="M16 40c8 4 12 12 16 8s8-8 16 0" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Wallpaper Installation</h3>
+                    <p class="service-card-text">Expert installation of pre-pasted & unpasted wallpapers, ensuring flawless alignment and seamless pattern matching for a perfect finish.</p>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card reveal-up" data-delay="0.2">
+                    <div class="service-card-number">02</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="32" cy="32" r="26"/>
+                            <path d="M20 44c4-12 8-20 12-28M28 44c4-12 8-20 12-28M36 44c4-12 8-20 12-28"/>
+                            <path d="M14 20c12 4 24 4 36 0M12 32c12 4 28 4 40 0M14 44c12-4 24-4 36 0"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Custom Murals</h3>
+                    <p class="service-card-text">Breathtaking hand-selected murals, weathered-stone finishes, and hand-crafted torn paper products that transform spaces into works of art.</p>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card reveal-up" data-delay="0.3">
+                    <div class="service-card-number">03</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M32 8v48M20 12l12-4 12 4M16 20h32M14 28h36M16 36h32M20 44h24M24 52h16"/>
+                            <path d="M8 56h48"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Texture & Specialty</h3>
+                    <p class="service-card-text">Complex pattern work, textured custom wallcoverings, and specialty finishes that demand an expert hand and decades of experience.</p>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card reveal-up" data-delay="0.4">
+                    <div class="service-card-number">04</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 52V20l20-12 20 12v32"/>
+                            <path d="M24 52V36h16v16"/>
+                            <path d="M4 52h56"/>
+                            <circle cx="32" cy="26" r="4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Consultation</h3>
+                    <p class="service-card-text">Personalized on-site visits to assess your space, discuss your vision, and provide expert guidance on wallcovering selection and design.</p>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card reveal-up" data-delay="0.5">
+                    <div class="service-card-number">05</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="12" y="8" width="40" height="48" rx="2"/>
+                            <path d="M20 24h24M20 32h24M20 40h16"/>
+                            <path d="M12 16h40"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Wall Preparation</h3>
+                    <p class="service-card-text">Professional surface preparation including old wallpaper removal, priming, and wall conditioning to ensure a flawless foundation.</p>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card reveal-up" data-delay="0.6">
+                    <div class="service-card-number">06</div>
+                    <div class="service-card-icon">
+                        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M32 12v8M32 44v8M12 32h8M44 32h8"/>
+                            <path d="M20 20l5.6 5.6M38.4 38.4L44 44M44 20l-5.6 5.6M25.6 38.4L20 44"/>
+                            <circle cx="32" cy="32" r="8"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-card-title">Mentoring</h3>
+                    <p class="service-card-text">Sharing four decades of expertise with the next generation of wallcovering professionals through hands-on training and guidance.</p>
+                    <div class="service-card-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO ==================== -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal-up">
+                    <span class="section-label-line"></span>
+                    <span>Our Work</span>
+                </div>
+                <h2 class="section-title reveal-up"><em>Transformations</em></h2>
+                <p class="section-subtitle reveal-up">Every space tells a unique story. Here are some of ours.</p>
+            </div>
+
+            <div class="portfolio-filters reveal-up">
+                <button class="portfolio-filter active" data-filter="all" id="filterAll">All</button>
+                <button class="portfolio-filter" data-filter="residential" id="filterResidential">Residential</button>
+                <button class="portfolio-filter" data-filter="commercial" id="filterCommercial">Commercial</button>
+                <button class="portfolio-filter" data-filter="unique" id="filterUnique">Unique Spaces</button>
+            </div>
+        </div>
+
+        <div class="portfolio-grid container" id="portfolioGrid">
+            <div class="portfolio-item portfolio-item-tall" data-category="residential" id="portfolioItem1">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-living.png" alt="Living room with hand-painted mural wallpaper" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Residential</span>
+                        <h3 class="portfolio-item-title">Garden Mural Living Room</h3>
+                        <p class="portfolio-item-desc">Hand-painted botanical mural, Belle Meade</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="residential" id="portfolioItem2">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-bedroom.png" alt="Master bedroom with damask wallpaper" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Residential</span>
+                        <h3 class="portfolio-item-title">Blush Damask Suite</h3>
+                        <p class="portfolio-item-desc">Classic elegance, Green Hills</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="commercial" id="portfolioItem3">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-commercial.png" alt="Boutique hotel lobby with geometric wallpaper" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Commercial</span>
+                        <h3 class="portfolio-item-title">The Grand Lobby</h3>
+                        <p class="portfolio-item-desc">Boutique hotel, Downtown Nashville</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="unique" id="portfolioItem4">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-powder.png" alt="Powder room with chinoiserie wallpaper" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Unique Spaces</span>
+                        <h3 class="portfolio-item-title">Chinoiserie Powder Room</h3>
+                        <p class="portfolio-item-desc">Floor-to-ceiling transformation</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item portfolio-item-wide" data-category="residential" id="portfolioItem5">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-dining.png" alt="Dining room with botanical wallpaper" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Residential</span>
+                        <h3 class="portfolio-item-title">Emerald Dining Experience</h3>
+                        <p class="portfolio-item-desc">Botanical grandeur, Brentwood Estate</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="unique" id="portfolioItem6">
+                <div class="portfolio-item-inner">
+                    <img src="images/portfolio-unique.png" alt="Whimsical children's playroom" loading="lazy">
+                    <div class="portfolio-item-overlay">
+                        <span class="portfolio-item-category">Unique Spaces</span>
+                        <h3 class="portfolio-item-title">Enchanted Playroom</h3>
+                        <p class="portfolio-item-desc">Whimsical hand-painted wonderland</p>
+                        <button class="portfolio-item-btn" aria-label="View project details">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="process section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal-up">
+                    <span class="section-label-line"></span>
+                    <span>How We Work</span>
+                </div>
+                <h2 class="section-title reveal-up">Your Journey to <br><em>Beautiful Walls</em></h2>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-line" id="processLine"></div>
+
+                <div class="process-step reveal-up" data-delay="0.1">
+                    <div class="process-step-number">01</div>
+                    <div class="process-step-content">
+                        <h3>Discovery & Consultation</h3>
+                        <p>We begin with a conversation about your space, your style, and your aspirations. Whether in-person or virtual, we'll assess your walls and discuss possibilities.</p>
+                    </div>
+                    <div class="process-step-dot"></div>
+                </div>
+
+                <div class="process-step reveal-up" data-delay="0.2">
+                    <div class="process-step-number">02</div>
+                    <div class="process-step-content">
+                        <h3>Design & Selection</h3>
+                        <p>We'll guide you through wallcovering options, provide samples, and help you visualize the transformation. Our expertise ensures the perfect match for your space.</p>
+                    </div>
+                    <div class="process-step-dot"></div>
+                </div>
+
+                <div class="process-step reveal-up" data-delay="0.3">
+                    <div class="process-step-number">03</div>
+                    <div class="process-step-content">
+                        <h3>Wall Preparation</h3>
+                        <p>Great results start with great preparation. We meticulously prepare surfaces — removing old coverings, priming, and conditioning — for a flawless foundation.</p>
+                    </div>
+                    <div class="process-step-dot"></div>
+                </div>
+
+                <div class="process-step reveal-up" data-delay="0.4">
+                    <div class="process-step-number">04</div>
+                    <div class="process-step-content">
+                        <h3>Expert Installation</h3>
+                        <p>With 45+ years of precision, every seam is invisible, every pattern is perfectly aligned. This is where decades of mastery meet your vision.</p>
+                    </div>
+                    <div class="process-step-dot"></div>
+                </div>
+
+                <div class="process-step reveal-up" data-delay="0.5">
+                    <div class="process-step-number">05</div>
+                    <div class="process-step-content">
+                        <h3>The Reveal</h3>
+                        <p>Step back and fall in love with your space. We ensure every detail exceeds expectations before we consider the project complete.</p>
+                    </div>
+                    <div class="process-step-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="testimonials section">
+        <div class="testimonials-bg-text">PRAISE</div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label reveal-up">
+                    <span class="section-label-line"></span>
+                    <span>Client Love</span>
+                </div>
+                <h2 class="section-title reveal-up">Kind <em>Words</em></h2>
+            </div>
+
+            <div class="testimonials-carousel" id="testimonialsCarousel">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide active" id="testimonialSlide1">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-text">
+                            Lillian transformed our dining room into something straight out of Architectural Digest. Her precision with pattern matching is unmatched — you cannot find a single seam. Absolute perfection.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-line"></div>
+                            <span class="testimonial-author-name">Sarah M.</span>
+                            <span class="testimonial-author-title">Belle Meade Homeowner</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide" id="testimonialSlide2">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-text">
+                            We hired Lillian for our boutique hotel lobby and she exceeded every expectation. Her attention to detail and professionalism made the entire process effortless. Guests literally stop to admire the walls.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-line"></div>
+                            <span class="testimonial-author-name">The Thompson Group</span>
+                            <span class="testimonial-author-title">Downtown Nashville Hotel</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide" id="testimonialSlide3">
+                        <div class="testimonial-quote-mark">"</div>
+                        <blockquote class="testimonial-text">
+                            After seeing Lillian's work in a friend's home, I knew I had to hire her. She drove four hours to our home and the result? Our powder room is now the most photographed room in the house. Worth every penny.
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-author-line"></div>
+                            <span class="testimonial-author-name">Jennifer L.</span>
+                            <span class="testimonial-author-title">Lexington, KY</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn" id="testimonialPrev" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M5 12l6 6M5 12l6-6"/></svg>
+                    </button>
+                    <div class="testimonial-dots" id="testimonialDots">
+                        <span class="testimonial-dot active"></span>
+                        <span class="testimonial-dot"></span>
+                        <span class="testimonial-dot"></span>
+                    </div>
+                    <button class="testimonial-btn" id="testimonialNext" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M19 12l-6 6M19 12l-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA BANNER ==================== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-banner-content reveal-up">
+                <h2 class="cta-banner-title">Ready to Transform <em>Your Space?</em></h2>
+                <p class="cta-banner-text">Every great room starts with a conversation. Let's talk about bringing your walls to life.</p>
+                <a href="#contact" class="btn btn-primary btn-lg magnetic" id="ctaBannerBtn">
+                    <span>Start Your Project</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="section-label reveal-up">
+                        <span class="section-label-line"></span>
+                        <span>Get in Touch</span>
+                    </div>
+                    <h2 class="contact-title reveal-up">
+                        Begin Your <br><em>Transformation</em>
+                    </h2>
+                    <p class="contact-text reveal-up">
+                        Whether you're dreaming of a single accent wall or a whole-home transformation, we'd love to hear about your project.
+                    </p>
+
+                    <div class="contact-details reveal-up">
+                        <a href="tel:6153543000" class="contact-detail" id="contactPhone">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-detail-label">Call Us</span>
+                                <span class="contact-detail-value">615.354.3000</span>
+                            </div>
+                        </a>
+                        <a href="mailto:Lillian@LilliansInteriors.com" class="contact-detail" id="contactEmail">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-detail-label">Email</span>
+                                <span class="contact-detail-value">Lillian@LilliansInteriors.com</span>
+                            </div>
+                        </a>
+                        <div class="contact-detail" id="contactLocation">
+                            <div class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-detail-label">Based In</span>
+                                <span class="contact-detail-value">Nashville, Tennessee</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social reveal-up">
+                        <a href="https://facebook.com" class="contact-social-link" id="socialFacebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="https://instagram.com" class="contact-social-link" id="socialInstagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+                        </a>
+                        <a href="https://pinterest.com" class="contact-social-link" id="socialPinterest" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap reveal-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" required autocomplete="name">
+                            <label for="formName">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" required autocomplete="email">
+                            <label for="formEmail">Email Address</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="formPhone" name="phone" autocomplete="tel">
+                            <label for="formPhone">Phone Number</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <select id="formService" name="service" required>
+                                <option value="" disabled selected></option>
+                                <option value="installation">Wallpaper Installation</option>
+                                <option value="murals">Custom Murals</option>
+                                <option value="removal">Wallpaper Removal</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="commercial">Commercial Project</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <label for="formService">Service Needed</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group form-group-full">
+                            <textarea id="formMessage" name="message" rows="4" required></textarea>
+                            <label for="formMessage">Tell Us About Your Project</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit magnetic" id="formSubmitBtn">
+                            <span>Send Message</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">Lillian's</span>
+                        <span class="footer-logo-sub">Interiors</span>
+                    </div>
+                    <p class="footer-tagline">The Paper Experts — since 1982</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navigate</h4>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#process">Process</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <a href="#services">Installation</a>
+                        <a href="#services">Custom Murals</a>
+                        <a href="#services">Wall Prep</a>
+                        <a href="#services">Consultation</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect</h4>
+                        <a href="tel:6153543000">615.354.3000</a>
+                        <a href="mailto:Lillian@LilliansInteriors.com">Email Us</a>
+                        <a href="#contact">Request Estimate</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="copyrightYear">2026</span> Lillian's Interiors. All rights reserved.</span>
+                <span class="footer-craft">Crafted with care in Nashville, TN</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA Bar -->
+    <div class="mobile-cta-bar" id="mobileCta">
+        <div class="mobile-cta-bar-inner">
+            <a href="tel:6153543000" class="btn-mobile-call" id="mobileCallBtn">
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>Call Now</span>
+            </a>
+            <a href="#contact" class="btn-mobile-estimate" id="mobileEstimateBtn">
+                <span>Free Estimate</span>
+                <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImg" class="lightbox-img">
+            <div class="lightbox-info" id="lightboxInfo">
+                <span class="lightbox-category"></span>
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
