@@ -388,20 +388,104 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Contact Form ──
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
+
             const btn = document.getElementById('formSubmitBtn');
             const btnText = btn.querySelector('span');
-            const original = btnText.textContent;
-            btnText.textContent = 'Message Sent!';
-            btn.style.background = 'var(--color-sage)';
+            const originalText = btnText.textContent;
+
+            // Collect form data
+            const payload = {
+                name:    document.getElementById('formName').value.trim(),
+                email:   document.getElementById('formEmail').value.trim(),
+                phone:   document.getElementById('formPhone').value.trim(),
+                service: document.getElementById('formService').value,
+                message: document.getElementById('formMessage').value.trim(),
+            };
+
+            // Loading state
+            btnText.textContent = 'Sending…';
             btn.disabled = true;
-            setTimeout(() => {
-                btnText.textContent = original;
-                btn.style.background = '';
+            btn.style.opacity = '0.75';
+
+            // Remove any previous status message
+            const prevStatus = form.querySelector('.form-status');
+            if (prevStatus) prevStatus.remove();
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    // ✅ Success — swap form for a thank-you panel
+                    const formWrap = form.closest('.contact-form-wrap') || form.parentElement;
+                    const firstName = payload.name.split(' ')[0];
+
+                    const thankYou = document.createElement('div');
+                    thankYou.className = 'form-thank-you';
+                    thankYou.innerHTML = `
+                        <div class="form-thank-you-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="form-thank-you-title">Thank You, ${firstName}!</h3>
+                        <p class="form-thank-you-sub">Thank you for contacting us. We've received your message and will be in touch within one business day.</p>
+                        <div class="form-thank-you-divider"></div>
+                        <p class="form-thank-you-note">In the meantime, feel free to call us at <a href="tel:6153543000">615.354.3000</a>.</p>
+                        <button class="form-thank-you-reset" id="formReset">Send Another Message</button>
+                    `;
+
+                    // Fade form out, swap in thank-you
+                    form.style.transition = 'opacity 0.35s ease';
+                    form.style.opacity = '0';
+                    setTimeout(() => {
+                        formWrap.innerHTML = '';
+                        formWrap.appendChild(thankYou);
+                        requestAnimationFrame(() => thankYou.classList.add('visible'));
+
+                        document.getElementById('formReset').addEventListener('click', () => {
+                            thankYou.classList.remove('visible');
+                            setTimeout(() => {
+                                formWrap.innerHTML = '';
+                                formWrap.appendChild(form);
+                                form.reset();
+                                form.style.opacity = '0';
+                                btnText.textContent = originalText;
+                                btn.disabled = false;
+                                btn.style.opacity = '1';
+                                btn.style.background = '';
+                                requestAnimationFrame(() => { form.style.transition = 'opacity 0.35s ease'; form.style.opacity = '1'; });
+                            }, 350);
+                        });
+                    }, 350);
+
+                } else {
+                    throw new Error(data.error || 'Submission failed');
+                }
+
+            } catch (err) {
+                // ❌ Error state
+                btnText.textContent = originalText;
                 btn.disabled = false;
-                form.reset();
-            }, 3000);
+                btn.style.opacity = '1';
+
+                const errorMsg = document.createElement('p');
+                errorMsg.className = 'form-status form-status--error';
+                errorMsg.innerHTML = `Something went wrong. Please <a href="mailto:Lillian@LilliansInteriors.com" style="color:inherit;text-decoration:underline;">email us</a> or call <a href="tel:6153543000" style="color:inherit;text-decoration:underline;">615.354.3000</a>.`;
+                errorMsg.style.cssText = 'margin-top:16px;color:#c0392b;font-size:0.9rem;text-align:center;';
+                form.appendChild(errorMsg);
+
+                setTimeout(() => errorMsg.remove(), 6000);
+                console.error('Form submission error:', err);
+            }
         });
     }
 
