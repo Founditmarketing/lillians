@@ -35,7 +35,7 @@ module.exports = async function handler(req, res) {
         await resend.emails.send({
             from: 'Lillian\'s Interiors <hello@lilliansinteriors.com>',
             to: ['Lillian@LilliansInteriors.com'],
-            reply_to: email,
+            replyTo: email,
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
             html: `
                 <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2a2018;">
