@@ -423,25 +423,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
 
                 if (response.ok && data.success) {
-                    // ✅ Success state
-                    btnText.textContent = 'Message Sent!';
-                    btn.style.opacity = '1';
-                    btn.style.background = 'var(--color-sage, #8a9a7a)';
+                    // ✅ Success — swap form for a thank-you panel
+                    const formWrap = form.closest('.contact-form-wrap') || form.parentElement;
+                    const firstName = payload.name.split(' ')[0];
 
-                    const successMsg = document.createElement('p');
-                    successMsg.className = 'form-status form-status--success';
-                    successMsg.textContent = 'Thank you! We\'ll be in touch within one business day.';
-                    successMsg.style.cssText = 'margin-top:16px;color:var(--color-sage,#8a9a7a);font-size:0.9rem;text-align:center;';
-                    form.appendChild(successMsg);
+                    const thankYou = document.createElement('div');
+                    thankYou.className = 'form-thank-you';
+                    thankYou.innerHTML = `
+                        <div class="form-thank-you-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 class="form-thank-you-title">Thank You, ${firstName}!</h3>
+                        <p class="form-thank-you-sub">Thank you for contacting us. We've received your message and will be in touch within one business day.</p>
+                        <div class="form-thank-you-divider"></div>
+                        <p class="form-thank-you-note">In the meantime, feel free to call us at <a href="tel:6153543000">615.354.3000</a>.</p>
+                        <button class="form-thank-you-reset" id="formReset">Send Another Message</button>
+                    `;
 
+                    // Fade form out, swap in thank-you
+                    form.style.transition = 'opacity 0.35s ease';
+                    form.style.opacity = '0';
                     setTimeout(() => {
-                        btnText.textContent = originalText;
-                        btn.style.background = '';
-                        btn.disabled = false;
-                        btn.style.opacity = '1';
-                        form.reset();
-                        successMsg.remove();
-                    }, 4000);
+                        formWrap.innerHTML = '';
+                        formWrap.appendChild(thankYou);
+                        requestAnimationFrame(() => thankYou.classList.add('visible'));
+
+                        document.getElementById('formReset').addEventListener('click', () => {
+                            thankYou.classList.remove('visible');
+                            setTimeout(() => {
+                                formWrap.innerHTML = '';
+                                formWrap.appendChild(form);
+                                form.reset();
+                                form.style.opacity = '0';
+                                btnText.textContent = originalText;
+                                btn.disabled = false;
+                                btn.style.opacity = '1';
+                                btn.style.background = '';
+                                requestAnimationFrame(() => { form.style.transition = 'opacity 0.35s ease'; form.style.opacity = '1'; });
+                            }, 350);
+                        });
+                    }, 350);
 
                 } else {
                     throw new Error(data.error || 'Submission failed');

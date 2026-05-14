@@ -1497,3 +1497,104 @@ em { font-style: italic; color: var(--color-blush); }
         font-size: 0.78rem;
     }
 }
+
+/* ══════════════════════════════════════════════
+   CONTACT FORM — THANK YOU PANEL
+   ══════════════════════════════════════════════ */
+.form-thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 56px 40px;
+    min-height: 420px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.form-thank-you.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-thank-you-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-blush, #e8c9b0) 0%, var(--color-champagne, #f5ede0) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    box-shadow: 0 8px 32px rgba(201, 169, 122, 0.25);
+}
+
+.form-thank-you-icon svg {
+    width: 36px;
+    height: 36px;
+    color: var(--color-gold, #c9a97a);
+    stroke: var(--color-gold, #c9a97a);
+}
+
+.form-thank-you-title {
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 400;
+    color: var(--color-espresso, #2a2018);
+    margin: 0 0 16px;
+    letter-spacing: 0.02em;
+}
+
+.form-thank-you-sub {
+    font-size: 1rem;
+    color: var(--color-warm-gray, #7a6a58);
+    line-height: 1.75;
+    max-width: 380px;
+    margin: 0 0 28px;
+}
+
+.form-thank-you-divider {
+    width: 48px;
+    height: 1px;
+    background: var(--color-gold, #c9a97a);
+    margin: 0 auto 24px;
+    opacity: 0.5;
+}
+
+.form-thank-you-note {
+    font-size: 0.875rem;
+    color: var(--color-warm-gray, #7a6a58);
+    margin: 0 0 36px;
+}
+
+.form-thank-you-note a {
+    color: var(--color-gold, #c9a97a);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.form-thank-you-note a:hover {
+    border-color: var(--color-gold, #c9a97a);
+}
+
+.form-thank-you-reset {
+    background: transparent;
+    border: 1px solid var(--color-gold, #c9a97a);
+    color: var(--color-gold, #c9a97a);
+    padding: 12px 28px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s ease, color 0.2s ease;
+    font-family: var(--font-sans, sans-serif);
+}
+
+.form-thank-you-reset:hover {
+    background: var(--color-gold, #c9a97a);
+    color: #fff;
+}
