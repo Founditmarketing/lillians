@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
 
     try {
         await resend.emails.send({
-            from: 'Lillian\'s Interiors <noreply@lilliansinteriors.com>',
+            from: 'Lillian\'s Interiors <hello@lilliansinteriors.com>',
             to: ['decor8withpaper@aol.com', 'office@lilliansinteriors.com'],
             replyTo: email,
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
@@ -63,7 +63,7 @@ module.exports = async function handler(req, res) {
                                     <strong style="color: #8a6a4a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Email</strong>
                                 </td>
                                 <td style="padding: 12px 0; border-bottom: 1px solid #f0e8dc; color: #2a2018;">
-                                    <a href="mailto:${email}" style="color: #c9a97a; text-decoration: none;">${email}</a>
+                                    ${email}
                                 </td>
                             </tr>
                             ${phone ? `
@@ -72,7 +72,7 @@ module.exports = async function handler(req, res) {
                                     <strong style="color: #8a6a4a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Phone</strong>
                                 </td>
                                 <td style="padding: 12px 0; border-bottom: 1px solid #f0e8dc; color: #2a2018;">
-                                    <a href="tel:${phone}" style="color: #c9a97a; text-decoration: none;">${phone}</a>
+                                    ${phone}
                                 </td>
                             </tr>` : ''}
                             <tr>
