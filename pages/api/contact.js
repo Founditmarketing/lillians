@@ -3,6 +3,7 @@ const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 module.exports = async function handler(req, res) {
+    console.log('📥 Contact API received request:', req.method, JSON.stringify(req.body));
     // Only allow POST
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
@@ -32,10 +33,16 @@ module.exports = async function handler(req, res) {
     const serviceLabel = serviceLabels[service] || service;
 
     try {
-        await resend.emails.send({
-            from: 'hello@LilliansInteriors.com',
+        console.log('Resend payload:', {
+            from: 'hello@lilliansinteriors.com',
             to: ['Lillian@LilliansInteriors.com'],
-            replyTo: email,
+            replyTo: 'Lillian@LilliansInteriors.com',
+            subject: `New Project Inquiry from ${name} — ${serviceLabel}`
+        });
+        const resendResult = await resend.emails.send({
+            from: 'hello@lilliansinteriors.com',
+            to: ['Lillian@LilliansInteriors.com'],
+            replyTo: 'Lillian@LilliansInteriors.com',
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
             html: `
                 <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2a2018;">
@@ -110,9 +117,17 @@ module.exports = async function handler(req, res) {
             `,
         });
 
-        return res.status(200).json({ success: true });
+        console.log('Resend send successful, result:', resendResult);
+        console.log('✅ Resend send successful, result:', resendResult);
+            if (resendResult.error) {
+    console.error('Resend error response:', resendResult.error);
+    return res.status(500).json({ error: resendResult.error.message || 'Failed to send email via Resend' });
+}
+return res.status(200).json({ success: true });
     } catch (error) {
         console.error('Resend error:', error);
+        // also log full error details
+        console.error('Full error object:', JSON.stringify(error, null, 2));
         return res.status(500).json({ error: 'Failed to send message. Please try again or call us directly.' });
     }
 };

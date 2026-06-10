@@ -2,3 +2,5 @@
 node_modules
 .DS_Store
 .env*
+node-v22.9.0-darwin-x64/
+node.tar.gz
