@@ -33,16 +33,10 @@ module.exports = async function handler(req, res) {
     const serviceLabel = serviceLabels[service] || service;
 
     try {
-        console.log('Resend payload:', {
-            from: 'hello@lilliansinteriors.com',
-            to: ['Lillian@LilliansInteriors.com'],
-            replyTo: 'Lillian@LilliansInteriors.com',
-            subject: `New Project Inquiry from ${name} — ${serviceLabel}`
-        });
         const resendResult = await resend.emails.send({
-            from: 'hello@lilliansinteriors.com',
-            to: ['Lillian@LilliansInteriors.com'],
-            replyTo: 'Lillian@LilliansInteriors.com',
+            from: 'hello@lonestarshedsllc.com',
+            to: ['lyndon@lonestarshedsllc.com'],
+            replyTo: email,
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
             html: `
                 <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2a2018;">
@@ -117,11 +111,7 @@ module.exports = async function handler(req, res) {
             `,
         });
 
-        console.log('Resend send successful, result:', resendResult);
         console.log('✅ Resend send successful, result:', resendResult);
-            if (resendResult.error) {
-    console.error('Resend error response:', resendResult.error);
-    return res.status(500).json({ error: resendResult.error.message || 'Failed to send email via Resend' });
 }
 return res.status(200).json({ success: true });
     } catch (error) {
