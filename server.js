@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env.local') });
-const handler = require('./pages/api/contact'); // CommonJS export
+const handler = require('./api/contact'); // CommonJS export
 
 const app = express();
 const PORT = process.env.PORT || 3000;
