@@ -1,5 +1,11 @@
-process.env.RESEND_API_KEY = "re_7S5RyH9i_PP3pXLSJD2cHfhK2dFYd658V";
-const handler = require('./pages/api/contact');
+// Local dev test for /api/contact. Loads RESEND_API_KEY from .env.local
+// (never commit that file). Run: `node test_send.js`
+require('dotenv').config({ path: require('path').resolve(__dirname, '.env.local') });
+if (!process.env.RESEND_API_KEY) {
+  console.error('RESEND_API_KEY not set. Create .env.local with RESEND_API_KEY=re_...');
+  process.exit(1);
+}
+const handler = require('./api/contact');
 
 (async () => {
   const req = {
