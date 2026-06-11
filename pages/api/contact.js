@@ -4,14 +4,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 module.exports = async function handler(req, res) {
     console.log('📥 Contact API received request:', req.method, JSON.stringify(req.body));
-    // Only allow POST
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const { name, email, phone, service, message } = req.body;
+    const { name, email, phone, service, message } = req.body || {};
 
-    // Basic server-side validation
     if (!name || !email || !message || !service) {
         return res.status(400).json({ error: 'Please fill in all required fields.' });
     }
@@ -21,7 +20,6 @@ module.exports = async function handler(req, res) {
         return res.status(400).json({ error: 'Please provide a valid email address.' });
     }
 
-    // Format service label for the email body
     const serviceLabels = {
         installation: 'Wallpaper Installation',
         murals: 'Custom Murals',
@@ -34,8 +32,8 @@ module.exports = async function handler(req, res) {
 
     try {
         const resendResult = await resend.emails.send({
-            from: 'hello@lonestarshedsllc.com',
-            to: ['lyndon@lonestarshedsllc.com'],
+            from: "Lillian's Interiors <hello@lilliansinteriors.com>",
+            to: ['0nleiter@gmail.com'],
             replyTo: email,
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
             html: `
@@ -64,7 +62,7 @@ module.exports = async function handler(req, res) {
                                     <strong style="color: #8a6a4a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Email</strong>
                                 </td>
                                 <td style="padding: 12px 0; border-bottom: 1px solid #f0e8dc; color: #2a2018;">
-                                    ${email}
+                                    <a href="mailto:${email}" style="color: #c9a97a; text-decoration: none;">${email}</a>
                                 </td>
                             </tr>
                             ${phone ? `
@@ -73,7 +71,7 @@ module.exports = async function handler(req, res) {
                                     <strong style="color: #8a6a4a; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;">Phone</strong>
                                 </td>
                                 <td style="padding: 12px 0; border-bottom: 1px solid #f0e8dc; color: #2a2018;">
-                                    ${phone}
+                                    <a href="tel:${phone}" style="color: #c9a97a; text-decoration: none;">${phone}</a>
                                 </td>
                             </tr>` : ''}
                             <tr>
@@ -112,11 +110,9 @@ module.exports = async function handler(req, res) {
         });
 
         console.log('✅ Resend send successful, result:', resendResult);
-}
-return res.status(200).json({ success: true });
+        return res.status(200).json({ success: true });
     } catch (error) {
         console.error('Resend error:', error);
-        // also log full error details
         console.error('Full error object:', JSON.stringify(error, null, 2));
         return res.status(500).json({ error: 'Failed to send message. Please try again or call us directly.' });
     }
