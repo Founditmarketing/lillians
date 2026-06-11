@@ -33,7 +33,7 @@ module.exports = async function handler(req, res) {
     try {
         const resendResult = await resend.emails.send({
             from: "Lillian's Interiors <hello@lilliansinteriors.com>",
-            to: ['0nleiter@gmail.com'],
+            to: ['Lillian@LilliansInteriors.com'],
             replyTo: email,
             subject: `New Project Inquiry from ${name} — ${serviceLabel}`,
             html: `
