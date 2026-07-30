@@ -479,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const errorMsg = document.createElement('p');
                 errorMsg.className = 'form-status form-status--error';
-                errorMsg.innerHTML = `Something went wrong. Please <a href="mailto:Lillian@LilliansInteriors.com" style="color:inherit;text-decoration:underline;">email us</a> or call <a href="tel:6153543000" style="color:inherit;text-decoration:underline;">615.354.3000</a>.`;
+                errorMsg.innerHTML = `Something went wrong. Please <a href="mailto:Lillian@lilliansinteriors.com" style="color:inherit;text-decoration:underline;">email us</a> or call <a href="tel:6153543000" style="color:inherit;text-decoration:underline;">615.354.3000</a>.`;
                 errorMsg.style.cssText = 'margin-top:16px;color:#c0392b;font-size:0.9rem;text-align:center;';
                 form.appendChild(errorMsg);
 

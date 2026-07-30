@@ -4,3 +4,4 @@ node_modules
 .env*
 node-v22.9.0-darwin-x64/
 node.tar.gz
+qa-server.js
